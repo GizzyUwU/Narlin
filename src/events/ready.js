@@ -4,8 +4,8 @@ const config = require("../..//config");
 const fs = require("fs");
 const warnModel = require('../../models/statusModel')
 const list = [
-  'To Your Requests',
-  `To Beautful Bird's Chirping`,
+  'Your Requests',
+  `Beautful Bird's Chirping`,
   `Your Love Day`,
   `Loving Life`
 ];
