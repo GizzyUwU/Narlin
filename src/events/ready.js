@@ -5,7 +5,7 @@ const fs = require("fs");
 const warnModel = require('../../models/statusModel')
 const list = [
   'Your Requests',
-  `Beautful Bird's Chirping`,
+  `Beautiful Bird's Chirping`,
   `Your Love Day`,
   `Loving Life`
 ];
