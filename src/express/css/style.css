@@ -49,12 +49,15 @@ a {
       float: right;
   }
 .align {
-    box-align: cemter;
+    height: 200px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
   .invite {
       width: 10em;
       height: 1.5em;
       border-radius: 1em;
       background-color: rgb(233, 233, 233);
-   text-align: center;
+      text-align: center;
   }
