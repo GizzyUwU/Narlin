@@ -33,7 +33,7 @@ module.exports = {
         .setTitle(`A warning has been issued!`)
         .setDescription(`A warning has been issued to user ${user} by Modeator ${interaction.user}.`)
         .addField('Reason:', reasontxt)
-        .setColor('#AD1457')
+        .setColor('RANDOM')
 
     interaction.reply({ embeds: [embed] });
   }

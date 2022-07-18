@@ -6,10 +6,10 @@ const info = []
 
 module.exports = {
   name: 'help',
-  info: 'See My Commands :D',
+  info: 'Check out my commands!',
   data: new SlashCommandBuilder()
     .setName("help")
-    .setDescription("See My Commands :D"),
+    .setDescription("Check out my commands!"),
   run: async (interaction) => {
     let commands = fs.readdirSync(__dirname).filter(f => f.endsWith('.js')).forEach((command) => {
       let prop = require(`./${command}`)
@@ -21,12 +21,12 @@ module.exports = {
   
      const cmds = array.join("\n")
     const embed = new MessageEmbed()
-        .setTitle("Heyyy, Here's Commands")
-        .setDescription(`Heyyy, Heard You Needed Help Using Me. Here Are My Command's`)
-        .setColor('#AD1457')
+        .setTitle("Heyyy, here's my commands!")
+        .setDescription(`Hey there, heard you needed help using me. Here are my commands!`)
+        .setColor('RANDOM')
         .addFields(
-            { name: 'My Commands', value: `${cmds}`, inline: true },
-            { name: `Infomation`, value: `${infomation}`, inline: true },
+            { name: 'My commands:', value: `${cmds}`, inline: true },
+            { name: `Descriptions:`, value: `${infomation}`, inline: true },
         )
 
     interaction.reply({ embeds: [embed] });

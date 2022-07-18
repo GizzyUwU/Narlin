@@ -1,0 +1,59 @@
+@import url('https://fonts.googleapis.com/css2?family=Lobster+Two&family=Roboto:wght@100&display=swap');
+
+body {
+    overflow: scroll;
+}
+::-webkit-scrollbar {
+    width: 0px;
+    background: transparent; /* make scrollbar transparent */
+}
+p {
+    font-family: 'Roboto', sans-serif;
+    }
+h1 {
+font-family: 'Lobster Two', cursive;
+}
+a {
+    font-family: 'Lobster Two', cursive;
+    }
+
+.box {
+    height: 10em;
+    width: 10em;
+    background-color: rgb(236, 236, 241);
+    border-radius: 1em;
+    margin-left: 37em;
+    margin-top: 14em;
+}
+.spancenter {
+    display: table;
+    margin: 0 auto;
+}
+
+.inline-icon {
+    vertical-align: middle;
+     align-items: center;
+}
+.center {
+    display: flex;
+    justify-content: center;
+  }
+
+  .inline {
+      display: inline-flexbox;
+  }
+  .left {
+      float: left;
+  }
+  .right {
+      float: right;
+  }
+
+  .invite {
+      width: 10em;
+      height: 1.5em;
+      border-radius: 1em;
+      background-color: rgb(233, 233, 233);
+   text-align: center;
+   margin-left: 37.8em;   
+  }

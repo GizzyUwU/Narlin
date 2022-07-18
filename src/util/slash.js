@@ -3,7 +3,7 @@ const ora = require("ora");
 const empty = require("is-empty");
 
 const slash = {
-  register: async (clientId, commands) => {
+  register: async (ClientId, commands) => {
     const loadSlash = ora(`Registering Slash Commands`).start();
 
     const { REST } = require("@discordjs/rest");
@@ -15,7 +15,7 @@ const slash = {
       const guildId = config.bot?.guildId;
       if (!empty(guildId) ?? !isNaN(guildId)) {
         await rest
-          .put(Routes.applicationGuildCommands(clientId, guildId), {
+          .put(Routes.applicationGuildCommands(ClientId, guildId), {
             body: commands,
           })
           .then(() => {
@@ -23,7 +23,7 @@ const slash = {
           });
       } else {
         await rest
-          .put(Routes.applicationCommands(clientId), { body: commands })
+          .put(Routes.applicationCommands(ClientId), { body: commands })
           .then(() => {
             loadSlash.succeed(`Loaded Slash Commands`);
           });

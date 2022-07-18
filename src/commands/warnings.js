@@ -4,11 +4,11 @@ const fs = require('fs')
 const warnModel = require('../../models/warnModel')
 
 module.exports = {
-  name: 'warnings',
-  info: `See A User's Warns!`,
+  name: 'warns',
+  info: `Check a member's warns!`,
   data: new SlashCommandBuilder()
-    .setName("warnings")
-    .setDescription("See Warnings Of A User!")
+    .setName("warns")
+    .setDescription("Check a member's warns!")
     .addUserOption(option => option.setName("user").setDescription("User To See Warns From.").setRequired(true)),
     run: async (interaction) => {
     const user = interaction.options.getUser('user')
@@ -35,7 +35,7 @@ return [
     const embed = new MessageEmbed()
         .setTitle(`${user.tag} Warnings!`)
         .setDescription(embedDesc)
-        .setColor('#AD1457')
+        .setColor('RANDOM')
 
     interaction.reply({ embeds: [embed] });
 }

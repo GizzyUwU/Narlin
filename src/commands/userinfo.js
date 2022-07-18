@@ -36,7 +36,7 @@ const statuses = {
 
 module.exports = {
   name: 'userinfo',
-  info: "Check A User's Info",
+  info: "Check a member's infomation!",
   options: [{
       name: 'mention',
       description: 'mention a user',
@@ -44,7 +44,7 @@ module.exports = {
   }],
   data: new SlashCommandBuilder()
     .setName("userinfo")
-    .setDescription("Check A User's Info")
+    .setDescription("Check a member's infomation!")
     .addUserOption(option => option.setName("user").setDescription("User To Grab Info From.").setRequired(true)),
   run: async (interaction) => {
     const user = interaction.options.getUser('user')

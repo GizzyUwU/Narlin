@@ -6,21 +6,21 @@ let date = new Date().toLocaleDateString("fr-FR");
 const dateTime = date;
 
 module.exports = {
-  name: 'rm-warn',
-  info: `Remove Warn's From A User`,
+  name: 'rmwarn',
+  info: `Remove warn's from a user.`,
   data: new SlashCommandBuilder()
-    .setName("rm-warn")
-    .setDescription("Remove Warn's From A User")
-    .addStringOption(option => option.setName("id").setDescription("ID Of Warning.").setRequired(true)),
+    .setName("rmwarn")
+    .setDescription("Remove warn's from a user.")
+    .addStringOption(option => option.setName("id").setDescription("ID of Warning.").setRequired(true)),
     run: async (interaction) => {
     const id = interaction.options.getString('id')
  warnModel.findByIdAndRemove(id)
 
       .catch(err => console.log(err))
     const embed = new MessageEmbed()
-        .setTitle(`Warning Removed!`)
-        .setDescription(`Warning ${id} Is Removed`)
-        .setColor('#AD1457')
+        .setTitle(`Warning removed!`)
+        .setDescription(`Warning ${id} is removed.`)
+        .setColor('RANDOM')
 
     interaction.reply({ embeds: [embed] });
   

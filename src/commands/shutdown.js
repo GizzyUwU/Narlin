@@ -5,10 +5,10 @@ const fs = require('fs')
 
 module.exports = {
   name: 'shutdown',
-  info: "Bot Runs Protocol Shutdown.",
+  info: "I will run protocal shutdown!",
   data: new SlashCommandBuilder()
     .setName("shutdown")
-    .setDescription("Bot Runs Protocol Shutdown.")
+    .setDescription("I will run protocal shutdown!")
     .addStringOption(option => option.setName("password").setDescription("Password To Use Command.").setRequired(true)),
     run: async (interaction) => {
     const password = interaction.options.getString('password')
@@ -22,6 +22,7 @@ module.exports = {
         const embed = new MessageEmbed()
         .setTitle('Shutting Down!')
         .setDescription(`Protocol Shutdown Commencing In 3 Seconds!`)
+        .setColor('RANDOM')
 
     interaction.reply({ embeds: [embed], ephemeral: true });
     setTimeout(function(){
