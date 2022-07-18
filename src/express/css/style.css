@@ -48,13 +48,13 @@ a {
   .right {
       float: right;
   }
-
+.align {
+    box-align: cemter;
+}
   .invite {
       width: 10em;
       height: 1.5em;
       border-radius: 1em;
       background-color: rgb(233, 233, 233);
    text-align: center;
-   margin-left: 37.8em;   
-   position: absolute;
   }
