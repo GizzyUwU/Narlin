@@ -63,3 +63,8 @@ a {
       margin-left: auto;
       margin-right: auto;
   }
+
+  a {
+	text-decoration: none; /* remove underline */
+	color: inherit; /* remove blue */
+}
